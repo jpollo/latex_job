@@ -1,0 +1,77 @@
+%/usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec
+%$ sudo mktexlsr
+%最后在 LaTeX 文稿中，加载该宏包即可：
+%\usepackage{zhfontcfg}
+
+%  xetex/xelatex 字体设定宏包
+ 
+\ProvidesPackage{zhfontcfg}
+%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题
+\usepackage[cm-default]{fontspec} 
+
+\usepackage{xunicode,xltxtra}
+\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项
+ %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+\defaultfontfeatures{Mapping=tex-text}
+% 中文断行
+%\XeTeXlinebreaklocale "zh"
+%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+%将系统字体名映射为逻辑字体名称，主要是为了维护的方便
+
+\usepackage{indentfirst}%段落首行缩进
+\setlength{\parindent}{2em}%缩进两个字符
+
+\newcommand\fontnamehei{文泉驿正黑}
+\newcommand\fontnamesong{SimSun}
+\newcommand\fontnamekai{楷体}
+\newcommand\fontnamemono{FreeMono}
+\newcommand\fontnameroman{Times New Roman}
+%%设置常用中文字号，方便调用
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}
+
+
+%设置正文字体 
+\setCJKmainfont{WenQuanYi Micro Hei}
+%\setCJKsansfont{Adobe Heiti Std}%中文无衬线字体
+%\setCJKmonofont{WenQuanYi Micro Hei Mono}%中文等宽字体
+%\setCJKmonofont{SimSun}   %设置等宽中文字体
+
+%\setmainfont{Luxi Serif}   %英文衬线字体
+%\setsansfont{Luxi Sans}   %英文无衬线字体
+%\setmonofont{Luxi Mono}   %英文等宽字体
+%\setmainfont{}
+%\setmainfont[BoldFont=\fontnamehei]{\fontnamehei}
+%\setsansfont[BoldFont=\fontnamehei]{\fontnamekai}
+%\setmonofont{\fontnamemono}
+%楷体
+\newfontinstance\KAI {\fontnamekai}
+\newcommand{\kai}[1]{{\KAI#1}}
+%黑体
+\newfontinstance\HEI{\fontnamehei}
+\newcommand{\hei}[1]{{\HEI#1}}
+%英文
+\newfontinstance\ENF{\fontnameroman}
+\newcommand{\en}[1]{\,{\ENF#1}\,}
+
+
+%%%%%%%%%%%%%%%%%补充%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setmainfont{DejaVu Serif}%设置西文衬线字体,{}中是字体名,可更换,下同
+%\setsansfont{DejaVu Sans}%设置西文无衬线字体
+%\setmonofont{DejaVu Sans Mono}%设置西文等宽字体
+%\setCJKmainfont{Adobe Song Std}%设置中文衬线字体,若没有该字体,请替换该字符串为系统已有的中文字体,下同
+%\setCJKsansfont{Adobe Heiti Std}%中文无衬线字体
+%\setCJKmonofont{WenQuanYi Micro Hei Mono}%中文等宽字体
+%中文断行和弹性间距在XeCJK中自动处理了
+%\XeTeXlinebreaklocale “zh”%中文断行
+%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt%左右弹性间距
+
+
