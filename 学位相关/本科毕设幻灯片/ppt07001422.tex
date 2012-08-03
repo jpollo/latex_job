@@ -1,0 +1,96 @@
+\documentclass[14pt,hyperref={CJKbookmarks=true}]{beamer}
+\usepackage[space,noindent]{ctex}
+
+\usetheme{Madrid}
+\setbeamercolor{background canvas}{bg=}  %水印
+
+\begin{document}
+\heiti
+\title{基于混沌映射的图像置乱特性分析}
+\author{沈\quad 杰\quad 07001422}
+\institute[通达自动化]{南京邮电大学\quad 通达学院}
+\date{2011.6.13}
+\logo{\includegraphics{nanyou_logo}}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Why}
+\begin{frame}
+\frametitle{Why?}
+
+\begin{itemize}
+  \item 混沌映射\& 图像加密
+  \pause
+  \item 频域
+\end{itemize}
+
+\end{frame}
+
+\section{How}
+\frametitle{How?}
+\begin{frame}
+\frametitle{How?}
+\begin{itemize}
+  \item step1.预处理
+  \item step2.频域加密
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{How?}
+\vspace{-10mm}
+\centerline{\zihao{3} 魔方变换}
+\begin{columns}[onlytextwidth]
+\begin{column}{0.5\textwidth}
+\centerline{\zihao{4} 3-D}
+\begin{center}
+\includegraphics[width=0.9\columnwidth,height=35mm]{cubic}\\
+\end{center}
+\end{column}
+\pause
+\begin{column}{0.5\textwidth}
+\centerline{\zihao{4} 2-D}
+\begin{center}
+\includegraphics[width=0.8\columnwidth,height=35mm]{cubic1}\\
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{How?}
+\begin{columns}[onlytextwidth]
+\begin{column}{0.3\textwidth}
+\centerline{\zihao{3} 排序变换}
+\end{column}
+\begin{column}{0.7\textwidth}
+\begin{center}
+\includegraphics[width=0.8\columnwidth,height=35mm]{paixu}\\
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
+\frametitle{After}
+分析：
+\begin{itemize}
+  \item 图像统计特性
+  \item 算法安全性
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{After}
+一些比较：
+\end{frame}
+
+\section{结束语}
+\begin{frame}
+
+\frametitle{The End}
+ Thanks！
+\end{frame}
+
+
+\end{document} 

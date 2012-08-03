@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Why}{2}{0}{1}
+\beamer@sectionintoc {2}{How}{4}{0}{2}
+\beamer@sectionintoc {3}{Ω· ¯”Ô}{10}{0}{3}
